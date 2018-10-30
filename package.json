@@ -4,8 +4,9 @@
   "description": "Solve Above the fold content performance problem using critical css api.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --mode production"
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
