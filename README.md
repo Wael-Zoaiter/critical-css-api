@@ -9,13 +9,14 @@ The critical css API is a RESTFull API build to solve the **Above The Fold Conte
 The API take two Params (html, css).
 1. _html_: link to the HTML page that you want to get the critical css for.
 2. _css_: link to the CSS file for your stylesheet.
-**return** CSS StyleSheet for the Critical Css that should be inlined in the head of your the page.
+- **return** CSS StyleSheet for the Critical Css that should be inlined in the head of your the page.
+
 **example**: [Demo](https://criticalcssapi.herokuapp.com/api/html=http%3A%2F%2Fwebinjaz.com/css=http%3A%2F%2Fwael.webinjaz.com%2Fcss%2Fstyle.css).
 
 ## Usage
 
 ### Params:
-Simply send a request to the `/api` with to required params:
+Simply send a request to the `/api` with two required params:
 - **html**: the _encoded url_ for the html page.
 - **css**: the _encoded url_ for the css file.
 
