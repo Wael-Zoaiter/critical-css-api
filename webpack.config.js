@@ -23,7 +23,7 @@ module.exports = {
     ]
   },
   plugins: [
-  	new CleanWebpackPlugin('dist', {}),
+  	// new CleanWebpackPlugin('dist', {}),
   	new HtmlWebpackPlugin({
   		inject: false,
   		hash: false,
