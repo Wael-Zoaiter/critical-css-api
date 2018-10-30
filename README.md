@@ -11,7 +11,7 @@ The API take two Params (html, css).
 2. _css_: link to the CSS file for your stylesheet.
 - **return** CSS StyleSheet for the Critical Css that should be inlined in the head of your the page.
 
-**example**: [Demo](https://criticalcssapi.herokuapp.com/api/html=http%3A%2F%2Fwebinjaz.com/css=http%3A%2F%2Fwael.webinjaz.com%2Fcss%2Fstyle.css).
+**example**: [Demo](https://criticalcssapi.herokuapp.com/api?html=http%3A%2F%2Fwebinjaz.com&css=http%3A%2F%2Fwael.webinjaz.com%2Fcss%2Fstyle.css).
 
 ## Usage
 
@@ -23,7 +23,7 @@ Simply send a request to the `/api` with two required params:
 ### Link Format:
 The API link format should be like:
 ```
-https://criticalcssapi.herokuapp.com/api/html=<html_link>/css=<css_link>
+https://criticalcssapi.herokuapp.com/api?html=<html_link>&css=<css_link>
 ```
 
 > **Important**: The url for both (html page) and (css file) should be encoded.
@@ -31,7 +31,14 @@ https://criticalcssapi.herokuapp.com/api/html=<html_link>/css=<css_link>
 
 ### example:
 ```
-https://criticalcssapi.herokuapp.com/api/html=http%3A%2F%2Fwebinjaz.com/css=http%3A%2F%2Fwael.webinjaz.com%2Fcss%2Fstyle.css
+https://criticalcssapi.herokuapp.com/api?html=http%3A%2F%2Fwebinjaz.com&css=http%3A%2F%2Fwael.webinjaz.com%2Fcss%2Fstyle.css
+```
+**OR** you can send this params as JSON to `criticalcssapi.herokuapp.com/api`, example:
+``` json
+{
+    "html": "http%3A%2F%2Fwebinjaz.com",
+    "css": "http%3A%2F%2Fwael.webinjaz.com%2Fcss%2Fstyle.css"
+}
 ```
 
 ## Under the hood

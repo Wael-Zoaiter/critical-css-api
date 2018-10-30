@@ -2,7 +2,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlCriticalWebpackPlugin = require('html-critical-webpack-plugin');
 
 module.exports = {
@@ -23,7 +22,6 @@ module.exports = {
     ]
   },
   plugins: [
-  	// new CleanWebpackPlugin('dist', {}),
   	new HtmlWebpackPlugin({
   		inject: false,
   		hash: false,

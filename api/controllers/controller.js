@@ -4,8 +4,8 @@ var request = require('request');
 
 exports.send_critical_css = function(req, res)
 {
-  var htmlLink = req.params.htmlLink;
-  var cssLink = req.params.cssLink;
+  var htmlLink = req.query.html;
+  var cssLink = req.query.css;
 
   create_file(htmlLink, 'html');
   create_file(cssLink, 'css');
