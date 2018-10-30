@@ -10,7 +10,7 @@ const routes = require('./api/routes/routes');
 routes(app);
 
 app.use(function(req, res) {
-  res.status(404).send({url: req.originalUrl + ' not found <br> Please see: <a href="https://github.com/Wael-Zoaiter/critical-css-api/blob/master/README.md">Getting Started</a>'});
+  res.status(404).send({url: req.originalUrl + ' not found \n Please see: https://github.com/Wael-Zoaiter/critical-css-api/blob/master/README.md'});
 });
 
 app.listen(port);
