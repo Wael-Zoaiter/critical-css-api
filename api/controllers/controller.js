@@ -22,7 +22,7 @@ exports.send_critical_css = function(req, res)
 
   exec('npm run build', function(err, stdout, stderr) {
     if (err) throw err;
-    console.log('executing npm', stdout, stderr);
+    console.log('..........executing npm........', stdout, stderr);
     fs.readFile('dist/critical.css', function(err, data) {
       if (err) throw err;
       res.writeHead(200, {'Content-Type': 'text/css'});
