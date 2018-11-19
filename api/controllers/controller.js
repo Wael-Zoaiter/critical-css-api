@@ -20,7 +20,7 @@ exports.send_critical_css = function(req, res)
     create_file_data(cssData, 'css');
   }
 
-  exec('npm run build', function(err, stdout, stderr) {
+  exec('webpack', function(err, stdout, stderr) {
     if (err) throw err;
     console.log('..........executing npm........', stdout, stderr);
     fs.readFile('dist/critical.css', function(err, data) {
