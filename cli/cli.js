@@ -19,8 +19,8 @@ fs.readFile(html, function(err, htmlData) {
     axios.get('https://criticalcssapi.herokuapp.com/api', {
       method: 'GET',
       params: {
-        htmlData: encodeURIComponent(html),
-        cssData: encodeURIComponent(css)
+        htmlData: encodeURIComponent(htmlData),
+        cssData: encodeURIComponent(cssData)
       }
     }).then(res => {
       fs.writeFile('style.css', res.data, function(err) {
