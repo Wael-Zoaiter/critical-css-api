@@ -27,8 +27,8 @@ fs.readFile(html, function(err, htmlData) {
         if(err) throw err;
         console.log('Success...');
       });
-    }).catch(err) {
+    }).catch(err => {
       console.log(err);
-    };
+    });
   });
 });
