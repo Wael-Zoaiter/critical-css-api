@@ -2,7 +2,7 @@
 
 const _ = require('lodash');
 const fs = require('fs');
-const request = require('request');
+const axios = require('axios');
 
 const [,, ...args] = process.argv;
 
@@ -16,9 +16,9 @@ fs.readFile(html, function(err, htmlData) {
   if(err) throw err;
   fs.readFile(css, function(err, cssData) {
     if(err) throw err;
-    fetch('https://criticalcssapi.herokuapp.com/api', {
+    axios.get('https://criticalcssapi.herokuapp.com/api', {
       method: 'GET',
-      body: {
+      params: {
         htmlData: html,
         cssData: css
       }
@@ -27,14 +27,8 @@ fs.readFile(html, function(err, htmlData) {
         if(err) throw err;
         console.log('Success...');
       });
-    });
-    // fs.writeFile('C:/xampp/htdocs/critical-css-api/src/style.css', data, function(err) {
-    //   if(err) throw err;
-    //   console.log('Processing css ...');
-    // });
+    }).catch(err) {
+      console.log(err);
+    };
   });
-  // fs.writeFile('C:/xampp/htdocs/critical-css-api/src/index.html', data, function(err) {
-  //   if(err) throw err;
-  //   console.log('Processing html ...');
-  // });
 });
