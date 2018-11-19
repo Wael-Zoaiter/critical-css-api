@@ -29,7 +29,7 @@ module.exports = {
   		filename: 'index.html'
 		}),
 		new MiniCssExtractPlugin({
-  		filename: 'style.css'
+  		filename: './style.css'
   	}),
   	new HtmlCriticalWebpackPlugin({
   		base: path.resolve(__dirname, 'dist'),
