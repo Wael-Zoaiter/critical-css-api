@@ -23,7 +23,7 @@ fs.readFile(html, function(err, htmlData) {
         cssData: css
       }
     }).then(res => {
-      fs.writeFile('style.css', res, function(err) {
+      fs.writeFile('style.css', res.data, function(err) {
         if(err) throw err;
         console.log('Success...');
       });
