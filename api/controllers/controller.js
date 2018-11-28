@@ -89,38 +89,16 @@ function create_file_link(url, type)
   });
 };
 
-function create_file_data(data, type)
-{
-  var file_path = '';
-  if (type == 'html') {
-    file_path = 'src/index.html';
-  } else if (type == 'css') {
-    file_path = 'src/style.css';
-  } else {
-    throw new Error({message: 'File type should only be .html or .css'});
-  }
-  fs.writeFile(file_path, data , function(err) {
-      if (err) throw err;
-  });
-};
-
 exports.send_critical_css = function(req, res)
 {
   var htmlLink = req.query.html;
   var cssLink = req.query.css;
-  var htmlData = req.query.htmlData;
-  var cssData = req.query.cssData;
-
-  console.log(htmlLink,cssLink,htmlData,cssData);
 
   if (htmlLink && cssLink) {
     create_file_link(htmlLink, 'html');
     create_file_link(cssLink, 'css');
-  }
-
-  if (htmlData && cssData) {
-    create_file_data(htmlData, 'html');
-    create_file_data(cssData, 'css');
+  } else {
+    res.write('html and css params required');
   }
 
   var purgecss = new Purgecss({

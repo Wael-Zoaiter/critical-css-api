@@ -43,14 +43,11 @@ https://criticalcssapi.herokuapp.com/api?html=http%3A%2F%2Fwebinjaz.com&css=http
 
 ## Under the hood
 
-The API use **Webpack** and **HtmlCriticalWebpackPlugin** with some more webpack plugins to extract the critical css from the html page.
+The API use **PurgeCss** extract the critical css from the html page.
 
 ## Thanks
 
-- WebPack: [visit](https://webpack.js.org/).
-- HtmlWebpackPlugin: [visit](https://webpack.js.org/plugins/html-webpack-plugin/).
-- HtmlCriticalWebpackPlugin: [visit](https://github.com/anthonygore/html-critical-webpack-plugin).
-
+- PurgeCss: [visit](https://www.purgecss.com).
 
 ## Author
 
